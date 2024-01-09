@@ -13,12 +13,14 @@ public class Еncryption {
         String o = console.nextLine();
         System.out.println("Введите ключ для шифрования");
         int j = console.nextInt();
-        j = j % Example.ALPHABET.length();
+
+
         String s = Files.readString(Path.of(in));
         StringBuilder strBuilder = new StringBuilder();
         char c;
         for (int i = 0; i < s.length(); i++) {
             c = s.charAt(i);
+
 
             if (Character.isLetter(c)) {
                 c = (char) (s.charAt(i) + j);
@@ -26,7 +28,7 @@ public class Еncryption {
                 if ((Character.isLowerCase(s.charAt(i)) && c > 'я')
                         || (Character.isUpperCase(s.charAt(i)) && c > 'Я'))
 
-                    c = (char) (s.charAt(i) - (Example.ALPHABET.length() - j));
+                    c = (char) (s.charAt(i) + j);
             }
             strBuilder.append(c);
             String cipherText = strBuilder.toString();

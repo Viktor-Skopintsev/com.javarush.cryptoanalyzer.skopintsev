@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Example {
 
-    public static final String ALPHABET = ".,«»:?! абвгдеёжзийклмнопрстуфхцчшщъыьэюя0123456789";
+    public static final String ALPHABET = ".,«»:?! АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя0123456789";
     public static void main(String[] args) throws IOException {
         Start.start();
         Scanner console = new Scanner(System.in);

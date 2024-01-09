@@ -15,7 +15,7 @@ public class BruteForce {
         String s = Files.readString(Path.of(in));
         StringBuilder strBuilder = new StringBuilder();
         char c;
-        for (int j = 1; j <= Example.ALPHABET.length(); j++) {
+        for (int j = 1; j <= 32; j++) {
         for (int i = 0; i < s.length(); i++) {
 
             c = s.charAt(i);
@@ -27,7 +27,7 @@ public class BruteForce {
                 if ((Character.isLowerCase(s.charAt(i)) && c > 'я')
                         || (Character.isUpperCase(s.charAt(i)) && c > 'Я'))
 
-                    c = (char) (s.charAt(i) - (Example.ALPHABET.length() + j));
+                    c = (char) (s.charAt(i) - j);
             }
             strBuilder.append(c);
             String cipherText = strBuilder.toString();
