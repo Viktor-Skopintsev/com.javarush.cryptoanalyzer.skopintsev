@@ -13,6 +13,7 @@ public class Decoding {
         String o = console.nextLine();
         System.out.println("Введите ключ для шифрования");
         int j = console.nextInt();
+        j = j % 32;
 
         String s = Files.readString(Path.of(in));
         StringBuilder strBuilder = new StringBuilder();
